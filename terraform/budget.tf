@@ -1,7 +1,8 @@
 resource "azurerm_consumption_budget_subscription" "vmss_budget" {
-  name       = "vmss-demo-monthly-budget"
-  amount     = 50
-  time_grain = "Monthly"
+  name            = "vmss-demo-monthly-budget"
+  subscription_id = var.subscription_id
+  amount          = 50
+  time_grain      = "Monthly"
 
   time_period {
     start_date = "2025-01-01"
