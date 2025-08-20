@@ -9,8 +9,6 @@ time_period {
 start_date = "2025-01-01T00:00:00Z"
 end_date = "2026-01-01T00:00:00Z"
 }
-category = "Cost"
-
 
 filter {
 tag {
