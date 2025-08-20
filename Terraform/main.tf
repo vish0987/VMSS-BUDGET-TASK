@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
 name = "rg-vmss-demo"
-location = "eastus"
+location = "uk south"
 }
 
 
