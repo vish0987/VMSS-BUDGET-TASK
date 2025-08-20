@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rg-vmss-demo"
-  location = "UK South"
+  location = "South India"
 }
 
 resource "azurerm_virtual_network" "vnet" {
