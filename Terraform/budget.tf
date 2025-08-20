@@ -25,6 +25,6 @@ notification {
 enabled = true
 threshold = 80
 operator = "GreaterThan"
-contact_emails = ["owner@example.com"]
+contact_emails = ["shaikhussain752@gmail.com"]
 }
 }
