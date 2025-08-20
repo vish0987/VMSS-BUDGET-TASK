@@ -1,0 +1,4 @@
+admin_ssh_key {
+  username   = "hussain"
+  public_key = file("${path.module}/hussain.pub")
+}
