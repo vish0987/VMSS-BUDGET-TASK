@@ -27,7 +27,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
 
   admin_ssh_key {
     username   = "hussain"
-    public_key = file("/home/mujju/.ssh/id_rsa.pub")
+    public_key = file("${path.module}/hussain.pub")
   }
 
   source_image_reference {
@@ -45,11 +45,14 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   network_interface {
     name    = "nic"
     primary = true
-
     ip_configuration {
       name      = "internal"
       primary   = true
       subnet_id = azurerm_subnet.subnet.id
     }
+  }
+
+  tags = {
+    costScope = "vmss-demo"
   }
 }
