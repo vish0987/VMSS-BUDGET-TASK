@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-vmss-demo1"
+  name     = "rg-vmss-demo"
   location = "South India"
 }
 
