@@ -14,7 +14,7 @@ pipeline {
     ARM_CLIENT_SECRET   = '-Lp8Q~oFC8JH0AIsw5AhOGmlQdq-ZihXonMNabNj'
     ARM_TENANT_ID       = '66573a45-6f85-4878-bebc-e0bc24647836'
     ARM_SUBSCRIPTION_ID = '5d1b700e-5c37-4a48-a430-e148b56e5404'
-    TF_VAR_subscription_id = '5d1b700e-5c37-4a48-a430-e148b56e5404'
+    TF_VAR_subscription_id = '/subscriptions/5d1b700e-5c37-4a48-a430-e148b56e5404'
   }
 
   stages {
