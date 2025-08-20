@@ -23,10 +23,10 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = "Standard_B1s"
   instances           = 1
-  admin_username      = "hussain"  
+  admin_username      = "hussain"
 
   admin_ssh_key {
-    username   = "hussain"   
+    username   = "hussain"
     public_key = file("/home/mujju/.ssh/id_rsa.pub")
   }
 
@@ -45,11 +45,11 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   network_interface {
     name    = "nic"
     primary = true
+
     ip_configuration {
       name      = "internal"
       primary   = true
       subnet_id = azurerm_subnet.subnet.id
     }
   }
-
-  
+}
