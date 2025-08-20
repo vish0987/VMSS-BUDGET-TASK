@@ -4,9 +4,9 @@ resource "azurerm_consumption_budget_subscription" "vmss_budget" {
   amount          = 50
   time_grain      = "Monthly"
 
-  time_period {
-    start_date = "2025-01-01"
-    end_date   = "2030-12-31"
+ time_period {
+  start_date = "2025-01-01T00:00:00Z"
+  end_date   = "2030-12-31T00:00:00Z"
   }
 
   filter {
