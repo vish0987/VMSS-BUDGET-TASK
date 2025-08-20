@@ -1,5 +1,5 @@
 resource "azurerm_consumption_budget_subscription" "vmss_budget" {
-  name            = "vmss-demo-monthly-budget1"
+  name            = "vmss-demo-monthly-budget"
   subscription_id = var.subscription_id
   amount          = 50
   time_grain      = "Monthly"
