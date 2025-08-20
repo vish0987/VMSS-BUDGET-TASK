@@ -1,28 +1,34 @@
-resource "azurerm_consumption_budget_subscription" "budget" {
-name = "vmss-budget"
-subscription_id = data.azurerm_subscription.current.id
+resource "azurerm_consumption_budget_subscription" "vmss_budget" {
+  name       = "vmss-demo-monthly-budget"
+  amount     = 50
+  time_grain = "Monthly"
 
+  time_period {
+    start_date = "2025-01-01"
+    end_date   = "2030-12-31"
+  }
 
-amount = 50
-time_grain = "Monthly"
-time_period {
-start_date = "2025-01-01T00:00:00Z"
-end_date = "2026-01-01T00:00:00Z"
-}
+  filter {
+    tag {
+      name     = "costScope"
+      operator = "In"
+      values   = ["vmss-demo"]
+    }
+  }
 
-filter {
-tag {
-name = "costScope"
-operator = "In"
-values = ["vmss-demo"]
-}
-}
+  notification {
+    enabled        = true
+    operator       = "GreaterThan"
+    threshold      = 80
+    threshold_type = "Actual"
+    contact_emails = ["alerts@example.com"]
+  }
 
-
-notification {
-enabled = true
-threshold = 80
-operator = "GreaterThan"
-contact_emails = ["shaikhussain752@gmail.com"]
-}
+  notification {
+    enabled        = true
+    operator       = "GreaterThan"
+    threshold      = 100
+    threshold_type = "Forecasted"
+    contact_emails = ["shaikhussain@gmail.com"]
+  }
 }
