@@ -30,6 +30,6 @@ resource "azurerm_consumption_budget_subscription" "vmss_budget" {
     operator       = "GreaterThan"
     threshold      = 100
     threshold_type = "Forecasted"
-    contact_emails = ["shaikhussain@gmail.com"]
+    contact_emails = ["vishvendra.acumen@gmail.com"]
   }
 }
