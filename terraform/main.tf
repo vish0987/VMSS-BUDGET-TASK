@@ -28,10 +28,10 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = "Standard_B1s"
   instances           = 1
-  admin_username      = "hussain"
+  admin_username      = "vishvendra"
 
   admin_ssh_key {
-    username   = "hussain"
+    username   = "vishvendra"
     public_key = tls_private_key.ssh.public_key_openssh
   }
 
