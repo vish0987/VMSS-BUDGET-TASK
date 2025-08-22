@@ -1,4 +1,4 @@
-pipeline {
+  pipeline {
   agent any
 
   parameters {
@@ -10,11 +10,11 @@ pipeline {
   }
 
   environment {
-    ARM_CLIENT_ID       = 'a23c9c1b-273b-4dfd-bd59-8d01d0438578'
-    ARM_CLIENT_SECRET   = '-Lp8Q~oFC8JH0AIsw5AhOGmlQdq-ZihXonMNabNj'
-    ARM_TENANT_ID       = '66573a45-6f85-4878-bebc-e0bc24647836'
-    ARM_SUBSCRIPTION_ID = '5d1b700e-5c37-4a48-a430-e148b56e5404'
-    TF_VAR_subscription_id = '/subscriptions/5d1b700e-5c37-4a48-a430-e148b56e5404'
+    ARM_CLIENT_ID       = '4c0cbcda-a1c2-4fd6-a648-fb6d9e8105db'
+    ARM_CLIENT_SECRET   = 'Fl~8Q~XAeGDrv2R7Bw3gTvyhnZfPBs~66n1B_cSS'
+    ARM_TENANT_ID       = 'abdf28ce-79b2-47ac-a65f-9fb7e0d74d52'
+    ARM_SUBSCRIPTION_ID = '32606fc9-26e6-41a5-95ca-5bd38e7b7974'
+    TF_VAR_subscription_id = '/subscriptions/32606fc9-26e6-41a5-95ca-5bd38e7b7974'
   }
 
   stages {
